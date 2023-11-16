@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN Mekarjaya</title>
+    <link rel="icon" type="assets/tutwuri.png" href="assets/tutwuri.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/85550cfb5f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <style>
+        #dropdownNavbar-profil, #dropdownNavbar-guru, #dropdownNavbar-informasi {
+            z-index: 1000;
+        }
+
+        nav {
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="bg-slate-200">
+    <!-- header -->
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
+
+    <div id="header"></div>
+
+    
+
+    <div class="p-5 w-[90%] justify-center items-center mx-auto content-center mt-10 bg-white shadow-2xl rounded-3xl">
+        <h1 class="font-bold text-3xl text-center">Berita dan Informasi SD Negeri Mekarjaya</h1>
+        <div class="headline mt-5">
+            <img src="../assets/tutwuri.png" alt="" class="mx-auto w-[80%] max-h-[350px] border border-slate-400"> 
+            <h1 class="mt-3 ml-10 text-4xl font-semibold">headline news</h1> 
+            <p class="mt-1 ml-12 font-normal">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. <a href="#" class="text-blue-900 underline">Selengkapnya...</a> </p>
+
+        </div>
+        <div class="flex flex-row h-fit items-center justify-center ml-5 mt-10 bg-white border border-slate-400 shadow-md p-3 rounded-xl hover:scale-105 ">
+            <div class="lainnya flex flex-col">
+                <img src="../assets/tutwuri.png" alt="fotoBerita" class="fotoGuru max-w-[150px]">
+                <p class="text-xl text-center">nama guru</p>    
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

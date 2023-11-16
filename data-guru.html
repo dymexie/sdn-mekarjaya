@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN Mekarjaya</title>
+    <link rel="icon" type="assets/tutwuri.png" href="assets/tutwuri.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/85550cfb5f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <style>
+        #dropdownNavbar-profil, #dropdownNavbar-guru, #dropdownNavbar-informasi {
+            z-index: 1000;
+        }
+
+        nav {
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="bg-slate-200">
+    <!-- header -->
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+        });
+    </script>
+
+    <div id="header"></div>
+
+    <div class="p-5 w-[90%] justify-center items-center mx-auto content-center mt-10 bg-white shadow-2xl rounded-3xl">
+        <h1 class="font-semibold text-3xl text-center">Tenaga Pengajar SD Negeri Mekarjaya</h1>
+        
+        <div class="flex flex-row max-w-[150px] h-fit items-center justify-center mx-auto mt-10 bg-white border border-slate-400 shadow-md p-3 rounded-xl hover:scale-105 ">
+            <div class="flex flex-col">
+                <img src="../assets/tutwuri.png" alt="FotoGuru" class="fotoGuru">
+                <p class="text-xl text-center">nama guru</p>    
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
