@@ -16,56 +16,70 @@
             z-index: 1000;
         }
         nav {
-            z-index: 1001; /* Tambahkan nilai z-indeks yang lebih tinggi dari elemen dropdown */
+            z-index: 1001; 
         }
     </style>
 </head>
 <body>
-    <aside class="bg-blue-600 text-white w-64 h-full fixed top-0 left-0 flex flex-col">
-        <div class="p-4 border-b-2 rounded-xl shadow-2xl">
-            <a href="#" class="flex items-center">
-                <img src="../assets/tutwuri.png" class="h-10 mr-3" alt="Tutwuri Handayani" />
-                <span class="self-center text-lg font-semibold whitespace-nowrap">SD Negeri Mekarjaya</span>
-            </a>
-        </div>
-        <nav class="flex-1 mt-10">
-            <ul class="text-lg font-medium">
-                <li>
-                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Berita</a>
-                </li>
-                <li class="mt-3">
-                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Struktur Sekolah</a>
-                </li>
-                <li class="mt-3">
-                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Kontak</a>
-                </li>
-                <li class="mt-3">
-                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar-informasi"
-                        class="flex items-center justify-between w-full py-2 px-4 hover:bg-slate-700">Informasi
-                        <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div id="dropdownNavbar-informasi"
-                        class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow ml-4 w-[95%]">
-                        <ul class="py-2 text-sm text-gray-700">
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Guru</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Siswa</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Pegawai</a>
-                            </li>
+    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+        </svg>
+    </button>
+    
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-75 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+        <div class="h-full px-3 py-4 overflow-y-auto bg-blue-600">
+            <div class="border-b shadow-2xl rounded-2xl">
+                <a href="berita-admin.html" class="flex items-center ps-2.5 mb-5">
+                    <img src="../assets/tutwuri.png" class="h-10 me-3 sm:h-11" alt="Tutwuri Handayani" />
+                    <span class="self-center text-xl text-white font-bold whitespace-nowrap">SD Negeri Mekarjaya</span>
+                </a>    
+            </div>            
+            <div class="mt-10">                
+                <ul class="space-y-2 font-medium">
+                    <li>
+                        <a href="berita-admin.html" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400 group">
+                            <span class="ms-3">Berita</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="struktur-admin.html" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400 group">                    
+                            <span class="flex-1 ms-3 whitespace-nowrap">Struktur Sekolah</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profil-admin.html" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400 group">
+                            <span class="flex-1 ms-3 whitespace-nowrap">Profil Sekolah</span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" class="flex items-center w-full p-2 text-base text-white transition duration-75 rounded-lg group hover:bg-blue-400" aria-controls="dropdown-informasi" data-collapse-toggle="dropdown-informasi">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Informasi</span>
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <ul id="dropdown-informasi" class="hidden py-2 space-y-2">
+                                <li>
+                                    <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-blue-400">Data Guru</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-blue-400">Data Siswa</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-blue-400">Data Pegawai</a>
+                                </li>
                         </ul>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </aside>   
+                    </li>
+                    <li>
+                        <a href="../index.html" class="flex items-center p-2 text-white rounded-lg hover:bg-blue-400 group">
+                            <span class="flex-1 ms-3 whitespace-nowrap">Log Out</span>
+                        </a>
+                    </li>
+                </ul>    
+            </div>
+        </div>
+    </aside>
 </body>
 </html>

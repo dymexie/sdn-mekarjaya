@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru-SDN Mekarjaya</title>
+    <link rel="icon" type="assets/tutwuri.png" href="assets/tutwuri.png">
+    <!-- Script untuk memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://kit.fontawesome.com/85550cfb5f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>
+
+    <style>
+        #dropdownNavbar-informasi {
+            z-index: 1000;
+        }
+
+        nav {
+            z-index: 1001;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+        #toast-simple {
+            position: fixed;
+            top: 20px; /* Sesuaikan dengan jarak dari atas */
+            right: 20px; /* Sesuaikan dengan jarak dari kanan */
+            z-index: 1000; /* Pastikan z-index lebih tinggi dari elemen lain */
+        }
+    </style>
+
+    <!-- sidebar -->
+    <script>
+        $(function () {
+            $("#sidebar").load("sidebar.html");
+        });
+    </script>
+</head>
+
+<body class="bg-white">
+
+    <div id="sidebar"></div>
+
+    <main class="mt-16 ml-80">
+        <!-- Ganti Struktur Sekolah -->
+        
+    </main>
+
+</body>
+
+</html>
