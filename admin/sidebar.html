@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDN Mekarjaya</title>
+    <link rel="icon" type="assets/tutwuri.png" href="assets/tutwuri.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/85550cfb5f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <style>
+        #dropdownNavbar-informasi {
+            z-index: 1000;
+        }
+        nav {
+            z-index: 1001; /* Tambahkan nilai z-indeks yang lebih tinggi dari elemen dropdown */
+        }
+    </style>
+</head>
+<body>
+    <aside class="bg-blue-600 text-white w-64 h-full fixed top-0 left-0 flex flex-col">
+        <div class="p-4 border-b-2 rounded-xl shadow-2xl">
+            <a href="#" class="flex items-center">
+                <img src="../assets/tutwuri.png" class="h-10 mr-3" alt="Tutwuri Handayani" />
+                <span class="self-center text-lg font-semibold whitespace-nowrap">SD Negeri Mekarjaya</span>
+            </a>
+        </div>
+        <nav class="flex-1 mt-10">
+            <ul class="text-lg font-medium">
+                <li>
+                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Berita</a>
+                </li>
+                <li class="mt-3">
+                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Struktur Sekolah</a>
+                </li>
+                <li class="mt-3">
+                    <a href="index.html" class="block py-2 px-4 hover:bg-slate-700">Kontak</a>
+                </li>
+                <li class="mt-3">
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar-informasi"
+                        class="flex items-center justify-between w-full py-2 px-4 hover:bg-slate-700">Informasi
+                        <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="m1 1 4 4 4-4" />
+                        </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar-informasi"
+                        class="hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow ml-4 w-[95%]">
+                        <ul class="py-2 text-sm text-gray-700">
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Guru</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Siswa</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-lg hover:bg-gray-200">Pegawai</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </aside>   
+</body>
+</html>
