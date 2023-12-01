@@ -43,15 +43,16 @@
         }
     </style>
 
+    
     <!-- sidebar -->
     <script>
         $(function () {
             $("#sidebar").load("sidebar.html");
         });
     </script>
-</head>
 
-<body class="bg-white">
+</head>
+<body>
 
     <div id="sidebar"></div>
 
@@ -59,19 +60,33 @@
         <!-- upload berita -->
         <div class="berita flex flex-col bg-blue-600 rounded-3xl h-fit py-5">
             <div class="text-center p-auto border-b-2 border-white pb-4 rounded-xl shadow-2xl">
-                <span class="text-white text-xl font-bold items-center justify-center">Upload Berita SDN Mekarjaya</span>
+                <span class="text-white text-xl font-bold items-center justify-center">Tambah Guru SDN Mekarjaya</span>
             </div>
             <div class="my-5 px-7">
                 <div class="relative">
-                    <input type="text" id="judul" class="block px-2.5 pb-2.5 pt-4 w-full text-md text-white font-bold bg-transparent rounded-lg border border-white appearance-none focus:outline-none focus:ring-0 focus:border-none peer" placeholder=" " required>
-                    <label for="judul" class="absolute text-sm text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-blue-600 px-2 peer-focus:px-2 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 font-bold">Judul Berita</label>
+                    <input type="text" id="nama" class="block px-2.5 pb-2.5 pt-4 w-full text-md text-white font-bold bg-transparent rounded-lg border border-white appearance-none focus:outline-none focus:ring-0 focus:border-none peer" placeholder=" " required>
+                    <label for="nama" class="absolute text-sm text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-blue-600 px-2 peer-focus:px-2 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 font-bold">Nama Guru</label>
                 </div>
                 <div class="relative mt-3">
-                    <textarea rows="8" id="deskripsi" class="block px-2.5 pb-2.5 pt-4 w-full text-md text-white bg-transparent rounded-lg border border-white appearance-none focus:outline-none focus:ring-2 focus:border-1 peer" placeholder=" " required></textarea>
-                    <label for="deskripsi" class="absolute text-sm text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-blue-600 px-2 peer-focus:px-2 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 font-bold">Deskripsi Berita</label>
+                    <input type="text" id="nip" class="block px-2.5 pb-2.5 pt-4 w-full text-md text-white font-bold bg-transparent rounded-lg border border-white appearance-none focus:outline-none focus:ring-0 focus:border-none peer" placeholder=" " required>
+                    <label for="nip" class="absolute text-sm text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-blue-600 px-2 peer-focus:px-2 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 font-bold">NIP</label>
                 </div>
                 <div class="relative mt-3">
-                    <label class="block mb-2 text-md font-medium text-white" for="file_input">Upload Gambar</label>
+                    <input type="email" id="email" class="block px-2.5 pb-2.5 pt-4 w-full text-md text-white font-bold bg-transparent rounded-lg border border-white appearance-none focus:outline-none focus:ring-0 focus:border-none peer" placeholder=" " required>
+                    <label for="email" class="absolute text-sm text-white duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-blue-600 px-2 peer-focus:px-2 peer-focus:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 font-bold">E-Mail</label>
+                </div>
+                <div class="relative mt-3">                    
+                    <label for="mapel" class="block mb-2 text-md font-medium text-white">Pilih Mata Pelajaran</label>
+                    <select id="mapel" class="bg-gray-50 border border-gray-300 text-black font-medium text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                    <option selected>Pilih Mata Pelajaran</option>
+                    <option value="mtk">Matematika</option>
+                    <option value="ipa">IPA</option>
+                    <option value="ips">IPS</option>
+                    <option value="sbk">Seni Budaya</option>
+                    </select>
+                </div>
+                <div class="relative mt-3">
+                    <label class="block mb-2 text-md font-medium text-white" for="file_input">Upload Foto Guru</label>
                     <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50" aria-describedby="file_input_help" id="file_input" type="file" required>
                     <p class="mt-1 text-sm text-white ml-2" id="file_input_help">SVG, PNG, JPG or GIF (MAX. 800x400px).</p>
                 </div>
@@ -119,6 +134,6 @@
         // Tambahkan event listener ke tombol upload
         document.getElementById('uploadButton').addEventListener('click', handleUpload);
     </script>
+    
 </body>
-
 </html>

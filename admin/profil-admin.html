@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guru-SDN Mekarjaya</title>
-    <link rel="icon" type="assets/tutwuri.png" href="assets/tutwuri.png">
+    <title>Admin-SDN Mekarjaya</title>
+    <link rel="icon" type="assets/tutwuri.png" href="../assets/tutwuri.png">
     <!-- Script untuk memuat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -57,8 +57,95 @@
 
     <main class="mt-16 ml-80">
         <!-- Ganti Profil Sekolah -->
-        
+        <div class="profil flex flex-col bg-blue-600 rounded-3xl h-fit py-5">
+            <div class="text-center p-auto border-b-2 border-white pb-4 rounded-xl shadow-2xl">
+                <span class="text-white text-2xl font-extrabold text-center tracking-wider">Profil SDN Negeri Mekarjaya</span>   
+            </div>
+            <div class="mt-5 ml-10">
+                <form class="w-[95%] items-center" >
+                    <!-- sambutan kepala Sekolah -->                    
+                    <div class="relative mt-3">
+                        <label for="sambutan" class="block mb-2 text-lg font-bold text-white">Sambutan Kepala Sekolah</label>
+                        <textarea id="sambutan" rows="10" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Sambutan Kepala Sekolah...."></textarea>
+                    </div>
+                    <!-- visi -->       
+                    <div class="relative mt-3">
+                        <label for="visi" class="block mb-2 text-lg font-bold text-white">Visi Sekolah</label>
+                        <textarea id="visi" rows="7" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Visi Sekolah...."></textarea>
+                    </div>
+                    <!-- Misi -->       
+                    <div class="relative mt-3">
+                        <label for="misi" class="block mb-2 text-lg font-bold text-white">Misi Sekolah</label>
+                        <textarea id="misi" rows="7" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Misi Sekolah...."></textarea>
+                    </div>
+                    <!-- alamat -->
+                    <div class="relative mt-3">
+                        <label for="alamat" class="block mb-2 text-lg font-bold text-white">Alamat</label>
+                        <input id="alamat" type="text" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Alamat Sekolah">
+                    </div>
+                    <!-- kontak -->
+                    <div class="flex flex-row justify-between">
+                        <!-- no hp -->
+                        <div class="relative mt-3 w-[47%]">
+                            <label for="nohp" class="block mb-2 text-lg font-bold text-white">No WhatsApp</label>
+                            <input id="nohp" type="tel" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="+62 812-2563-2564">
+                        </div>
+                        <!-- email -->
+                        <div class="relative mt-3 w-[47%]">
+                            <label for="email" class="block mb-2 text-lg font-bold text-white">E-Mail</label>
+                            <input id="email" type="email" class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="sdnmekarjaya@gmail.com">
+                        </div>
+                    </div>
+                    <!-- btn submit -->
+                    <div class="relative mt-6 mb-3 shadow-white">
+                        <button id="uploadButton" class="bg-white text-blue-600 font-bold py-2 px-7 rounded-full hover:bg-slate-300">Edit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="toast-simple" class="hidden" role="alert">
+            <div class="flex items-center w-full max-w-xs p-2 space-x-4 rtl:space-x-reverse text-blue-600 border border-blue-600 divide-x rtl:divide-x-reverse divide-gray-200 rounded-full shadow space-x">
+                <svg class="w-5 h-5 text-blue-600 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
+                </svg>
+                <div class="text-sm font-normal">Profil Berhasil Di Ubah</div>    
+            </div>            
+        </div>
     </main>
+
+    <!-- Script untuk menangani upload dan toast -->
+    <script>
+        // Fungsi untuk menampilkan toast
+        function showToast(message) {
+            const toastElement = document.getElementById('toast-simple');
+            const toastTextElement = toastElement.querySelector('.font-normal');
+    
+            toastTextElement.textContent = message;
+            toastElement.classList.remove('hidden');
+    
+            // Sembunyikan toast setelah 5 detik
+            setTimeout(function () {
+                toastElement.classList.add('hidden');
+            }, 5000);
+        }
+    
+        // Fungsi untuk menangani klik tombol upload
+        function handleUpload() {
+            // Lakukan logika upload di sini
+    
+            // Tampilkan toast setelah upload berhasil
+            showToast('Berita berhasil diupload.');
+    
+            // Tunda refresh halaman selama 5 detik sebelum melakukan refresh
+            setTimeout(function () {
+                location.reload();
+            }, 7000);
+        }
+    
+        // Tambahkan event listener ke tombol upload
+        document.getElementById('uploadButton').addEventListener('click', handleUpload);
+    </script>
+    
 
 </body>
 
